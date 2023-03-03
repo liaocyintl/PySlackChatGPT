@@ -30,7 +30,12 @@ A Python based Slack Chatbot that aggregates [ChatGPT](https://openai.com/blog/c
 
 ![](imgs/README/2023-03-03-12-18-49.png)
 
-6. Go to "Event Subscriptions" and enable events. You will need to specify a Request URL for receiving events from Slack. You can use [ngrok](https://ngrok.com/) to expose a local server to the internet. Run the following command to start ngrok:
+6. Go to "Event Subscriptions" and enable events. You will need to specify a Request URL for receiving events from Slack. 
+You should subscribe to the following events:
+- `app_mention`: a [type](https://api.slack.com/events/app_mention) of event that occurs when a user mentions your app in a channel.
+- `message.channels`: a [type](https://api.slack.com/events/message.channels) of event that occurs when a message is sent to a channel.
+
+Note: if you have no public IP address, you can use [ngrok](https://ngrok.com/) to expose a local server to the internet.
 
 ![](imgs/README/2023-03-03-14-35-51.png)
 
