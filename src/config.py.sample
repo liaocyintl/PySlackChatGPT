@@ -1,0 +1,4 @@
+SLACK_BOT_TOKEN = "xoxb-xxxxxxxx"
+SLACK_SIGNING_SECRET = "xxxxxxxx"
+OPENAI_API_KEY = "xxxxxx"
+CHATGPT_MODEL = "gpt-3.5-turbo"
