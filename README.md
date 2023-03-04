@@ -35,7 +35,9 @@ You should subscribe to the following events:
 - `app_mention`: a [type](https://api.slack.com/events/app_mention) of event that occurs when a user mentions your app in a channel.
 - `message.channels`: a [type](https://api.slack.com/events/message.channels) of event that occurs when a message is sent to a channel.
 
-Note: if you have no public IP address, you can use [ngrok](https://ngrok.com/) to expose a local server to the internet.
+Note: You may need to [Run the Bot](#run-the-bot) first to get a public IP address or Domain. Then, you can use the public IP address as the Request URL. (e.g. `http://<public-ip-address>:9999/slack/events`
+
+Hint: if you have no public IP address, you can use [ngrok](https://ngrok.com/) to expose a local server to the internet.
 
 ![](imgs/README/2023-03-03-14-35-51.png)
 
