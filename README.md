@@ -125,5 +125,5 @@ python main.py
 
 # Release Notes
 
-## v1.0.0 (2021-03-04)
+## v1.0.0 (2023-03-04)
 The first available version of the PySlackChatGPT.
