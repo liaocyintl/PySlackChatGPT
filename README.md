@@ -1,9 +1,15 @@
 # Introduction
 A Python based Slack Chatbot that aggregates [ChatGPT](https://openai.com/blog/chatgpt) responses to Slack messages.
 
+# Usage
+Mention the bot in a channel and it will respond with a ChatGPT response.
 ![](imgs/README/iShot_2023-03-04_06.48.33.gif)
 
-# Quick Start
+## Spcial Commands
+Replying following commands to the bot will trigger special actions.
+- `reset`: Reset current conversation
+
+# Quick Deployment
 
 ## Register Slack App
 
@@ -71,12 +77,12 @@ cp src/config.py.example src/config.py
 1. Build Docker Image
 
 ```
-docker build -t pyslackchatgpt:1.0.0 .
+docker build -t pyslackchatgpt:1.1.0 .
 ```
 
 2. Confirm Docker Image (Optional)
 
-Make sure the image `pyslackchatgpt:1.0.0` is listed.
+Make sure the image `pyslackchatgpt:1.1.0` is listed.
 ```
 docker images
 ```
@@ -87,7 +93,7 @@ docker images
 Note: You can change the port mapping number 9999 to any other port number you like.
 
 ```
-docker run -d -p 9999:9999 --name pyslackchatgpt pyslackchatgpt:1.0.0
+docker run -d -p 9999:9999 --name pyslackchatgpt pyslackchatgpt:1.1.0
 ```
 
 4. Confirm Docker Container Log (Optional)
@@ -127,3 +133,11 @@ python main.py
 
 ## v1.0.0 (2023-03-04)
 The first available version of the PySlackChatGPT.
+
+## v1.1.0 (2023-03-05)
+- Add exception handling for ChatGPT API call.
+- Add conversition reset by replying `reset` to the bot.
+- Instantiate ChatGPT API client for each Slack channel.
+- Show [ChatGPT messages role](https://platform.openai.com/docs/guides/chat/introduction) count in Slack messages.
+- Show message role count in Slack messages.
+- Show token count in Slack messages.
