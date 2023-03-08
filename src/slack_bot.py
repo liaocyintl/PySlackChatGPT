@@ -49,7 +49,7 @@ def handle_mention(body, say, logger):
     try:
       response_message_text, past_messages, result = chatgpt.completion(event_text)
     except Exception as err:
-      response_message_text = f"when call ChatGPT API. {err}"
+      raise err
 
     role_system_number = len([message for message in past_messages if message["role"] == "system"])
     role_assistant_number = len([message for message in past_messages if message["role"] == "assistant"])
